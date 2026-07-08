@@ -59,7 +59,7 @@ static void process_command (const std::string_view cmd)
 
 static void handle_keyboard ()
 {
-	const char c = static_cast<char>(cpu->read_io(IO_Port::TerminalReadTypedChar));
+	const char c = cpu->read_io(2);
 
 	if (terminal_is_return(c)) {
 		// funcionamento do enter 
